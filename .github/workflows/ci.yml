@@ -28,3 +28,6 @@ jobs:
 
     - name: Run Playwright Tests
       run: npx playwright test
+
+    - name: Install Python Data Science Packages
+      run: pip install pandas matplotlib tabulate

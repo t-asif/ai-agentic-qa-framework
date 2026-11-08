@@ -130,3 +130,11 @@ with open('test-results/execution-summary.html', 'w') as f:
     f.write(html_content)
 
 print("✅ Clean and minimal report generated successfully!")
+
+# --- Print clean Markdown Table in CI / Terminal logs ---
+print("\n### 📊 AI QA Execution Summary Table\n")
+try:
+    print(df.to_markdown(index=False))
+except ImportError:
+    print(df.to_string(index=False))
+print("\n")
